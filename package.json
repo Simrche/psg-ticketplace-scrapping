@@ -1,0 +1,21 @@
+{
+    "name": "ticketplacescraping",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "node --loader ts-node/esm index.ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "node-filter-async": "^3.0.0",
+        "puppeteer": "^20.9.0"
+    },
+    "devDependencies": {
+        "@types/puppeteer": "^7.0.4",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    }
+}
