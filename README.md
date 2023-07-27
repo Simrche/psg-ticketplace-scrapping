@@ -5,7 +5,7 @@ This project recovers the minimum prices available on the PSG ticket resale plat
 
 ### Setup
 
-```
+```bash
 npm install
 
 Add the categories to be scrapped to the targetedCategories variable (index.js line 5)
@@ -24,14 +24,14 @@ The more categories there are, the longer the function will take.
 
 ### Result format
 
-```
+```js
 {
-    opponentTeam: {
-        categoryNumber: minimumPrice
+    "opponentTeam": {
+        "categoryNumber": "minimumPrice"
     }
 }
 
-# Exemple :
+// Exemple :
 {
     "marseille": {
         "16": 70,
