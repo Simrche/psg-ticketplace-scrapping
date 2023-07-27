@@ -21,11 +21,11 @@ async function startScraping() {
 
     await page.goto("https://billetterie.psg.fr/fr/ticketplace");
 
-    await wait(5000, true);
+    await wait(5000);
 
     await page.click(".didomi-continue-without-agreeing");
 
-    await wait(3000, true);
+    await wait(3000);
 
     const ticketPlaceButtons = await page.$$(
         ".psgMatchCardLinks > a:nth-child(2)"
@@ -35,7 +35,7 @@ async function startScraping() {
         ".psgMatchCardTitle > span > span > span:nth-child(5)"
     );
 
-    await wait(1000, true);
+    await wait(1000);
 
     for (let index = 0; index < ticketPlaceButtons.length; index++) {
         const button = ticketPlaceButtons[index];
@@ -55,11 +55,11 @@ async function startScraping() {
 
         await matchPage.goto(link.toString().replace("JSHandle:", ""));
 
-        await wait(1300, true);
+        await wait(1300);
 
         await matchPage.click(".psgTicketplaceFastest button");
 
-        await wait(1300, true);
+        await wait(1300);
 
         const categoriesToggle = await matchPage.$$(
             "button.bookingCategoryToggle"
@@ -97,7 +97,7 @@ async function startScraping() {
 
             await category.category.click();
 
-            await wait(2000, true);
+            await wait(2000);
 
             const accessButtons = await matchPage.$$(
                 `.bookingCategory:nth-child(${index + 1}) .bookingBlockBtn`
@@ -108,11 +108,11 @@ async function startScraping() {
 
                 await element.click();
 
-                await wait(2000, true);
+                await wait(2000);
 
                 await matchPage.click(".bookingBackButton");
 
-                await wait(2000, true);
+                await wait(2000);
 
                 const firstPriceSpan = await matchPage.$(
                     ".bookingResaleTogglePrice span:nth-child(2)"
@@ -148,7 +148,7 @@ async function startScraping() {
 
                 await category.category.click();
 
-                await wait(1000, true);
+                await wait(1000);
             }
 
             if (categoryMinimumPrice) {
