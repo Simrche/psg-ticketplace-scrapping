@@ -5,20 +5,21 @@ This project recovers the minimum prices available on the PSG ticket resale plat
 
 ### Setup
 
-```bash
+``` bash
 npm install
+```
+```js
+//Add the categories to be scrapped to the targetedCategories variable (index.js line 5)
 
-Add the categories to be scrapped to the targetedCategories variable (index.js line 5)
-
-# Default 
+// Default 
 const targetedCategories = ["15", "16"];
 
-The more categories there are, the longer the function will take.
+//The more categories there are, the longer the function will take.
 ```
 
 ### Start the function
 
-```
+```bash
  npm run dev 
 ```
 
